@@ -35,10 +35,10 @@ my $core_promoter_min_length = 50; 				#In webtool user can't change this
 
 
 if ($max_motif_width < $min_motif_width) {
-	print "Maximum provided motif width smaller than minimum motif width. Reversing.\n"
-	$holder = $max_motif_width
-	$min_motif_width = $max_motif_width
-	$max_motif_width = $holder
+	print "Maximum provided motif width smaller than minimum motif width. Reversing.\n";
+	$holder = $max_motif_width;
+	$min_motif_width = $max_motif_width;
+	$max_motif_width = $holder;
 }
 
 if ($background_file) {
