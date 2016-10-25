@@ -39,10 +39,9 @@ python3 /scripts/parse_genelines.py $3
 #the python script takes the genelines.gff3 file and makes a genelines.bed out of it
 #prepare promoter region information
 bedtools flank -l $4 -r 0 -s -i genelines.bed -g bedgenome.genome > promoters.bed
-bedtools getfasta -fi genome_stripped.fa -bed promoters.bed -s -fo promoters_rough.fa
-#this results in some really crappy nomenclature for gene names
-#so let's make promoters.fa ourselves
-python3 /scripts/parse_promoters.py
+bedtools getfasta -fi genome_stripped.fa -bed promoters.bed -s -fo promoters_rough.fa -name
+#no longer needed - -name does this
+#python3 /scripts/parse_promoters.py
 
 #meme_lab is picky and demands a .fasta file specifically for some reason
 mv promoters.fa promoters.fasta
