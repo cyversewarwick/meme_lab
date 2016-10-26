@@ -39,7 +39,7 @@ python3 /scripts/parse_genelines.py $3
 #the python script takes the genelines.gff3 file and makes a genelines.bed out of it
 #prepare promoter region information
 bedtools flank -l $4 -r 0 -s -i genelines.bed -g bedgenome.genome > promoters.bed
-bedtools getfasta -fi genome_stripped.fa -bed promoters.bed -s -fo promoters_rough.fa -name
+bedtools getfasta -fi genome_stripped.fa -bed promoters.bed -s -fo promoters.fa -name
 #no longer needed - -name does this
 #python3 /scripts/parse_promoters.py
 
