@@ -58,4 +58,3 @@ rm genome_stripped.fa
 rm genome_stripped.fa.fai
 rm promoters.bed
 rm promoters.fasta
-rm promoters_rough.fa
