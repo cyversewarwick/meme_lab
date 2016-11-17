@@ -15,5 +15,9 @@ RUN apt-get -y install bioperl
 #the GD Perl package refuses to be cpanned, and the commands refuse to work in a Dockerfile
 RUN mkdir gd && cd gd && bash /scripts/install_GD.sh
 
+#set up analysis crash text file
+RUN apt-get -y install git
+RUN git clone https://github.com/cyversewarwick/analysis_crash.git
+
 #...I think that's it?
 ENTRYPOINT ["bash", "/scripts/meme_lab_tarwrapper.sh"]
