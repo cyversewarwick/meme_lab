@@ -6,7 +6,7 @@ MEME-LaB is a *de novo* motif overrepresentation algorithm, finding the top over
 
 ## Test Run
 
-If you want to try MEME-LaB out and get a feel for its output formatting, you can find demonstration data at `cyverseuk/meme-lab_testdata` under Community Data. Parameters can be left unaltered for the demonstration run.
+If you want to try MEME-LaB out and get a feel for its output formatting, you can find demonstration data at `iplantcollaborative/example_data/cyverseuk/meme-lab_testdata` under Community Data. Parameters can be left unaltered for the demonstration run.
 
 ## Input
 
@@ -20,7 +20,7 @@ The GFF3 annotation needs to be compatible with the provided genome, and is used
 
 ### GFF3 Gene ID Attribute
 
-A GFF3 file can carry a lot of information about an organism's genes, whilst the program is after the very basics - a distinct and discernible gene ID style that is also used in the input of gene groups for the second app, along with corresponding positioning. The GFF3 file is filtered to the lines that contain gene information, but the script subsequently needs information on which of the information fields to use as the identifier. For example, the Arabidopsis test data provided (`cyverseuk/meme-lab_testdata/annot.gff3` under Community Data) has the `gene_id=` field correspond to AGI identifiers, which are the widely accepted locus code nomenclature for Arabidopsis.
+A GFF3 file can carry a lot of information about an organism's genes, whilst the program is after the very basics - a distinct and discernible gene ID style that is also used in the input of gene groups for the second app, along with corresponding positioning. The GFF3 file is filtered to the lines that contain gene information, but the script subsequently needs information on which of the information fields to use as the identifier. For example, the Arabidopsis test data provided (`iplantcollaborative/example_data/cyverseuk/meme-lab_testdata/annot.gff3` under Community Data) has the `gene_id=` field correspond to AGI identifiers, which are the widely accepted locus code nomenclature for Arabidopsis.
 
 ### Promoter Length
 
@@ -28,7 +28,7 @@ How many base pairs upstream of the transcription start site to take as the prom
 
 ### Gene Group Input File
 
-A tab-delimited file with two columns, with the first column being the number of the gene group and the second column being a single gene ID in that gene group. For example, if you wanted to analyse two gene groups, with the first one containing 10 genes and the second one containing 15 genes, the input file would be 25 lines long, with 10 lines of gene group 1 IDs and 15 lines of gene group 2 IDs. Consult an example Arabidopsis file at `cyverseuk/meme-lab_testdata/input.txt` under Community Data.
+A tab-delimited file with two columns, with the first column being the number of the gene group and the second column being a single gene ID in that gene group. For example, if you wanted to analyse two gene groups, with the first one containing 10 genes and the second one containing 15 genes, the input file would be 25 lines long, with 10 lines of gene group 1 IDs and 15 lines of gene group 2 IDs. Consult an example Arabidopsis file at `iplantcollaborative/example_data/cyverseuk/meme-lab_testdata/input.txt` under Community Data.
 
 ### Number Of Motifs Per Gene Group
 
